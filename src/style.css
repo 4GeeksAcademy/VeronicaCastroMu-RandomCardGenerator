@@ -10,4 +10,5 @@ body {
 
 #secondIcon {
   font-size: 50px;
+  transform: rotate(-180deg);
 }
