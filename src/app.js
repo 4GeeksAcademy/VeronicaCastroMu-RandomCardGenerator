@@ -2,8 +2,8 @@
 import "bootstrap";
 import "./style.css";
 
-setTimeout(
-  (window.onload = function() {
+window.onload = function() {
+  setInterval(() => {
     const icons = ["♦", "♥", "♠", "♣"];
     const content = [
       "2",
@@ -32,12 +32,14 @@ setTimeout(
     secondIcon.innerHTML = icons[randomIcon];
 
     if (
-      (firstIcon.innerHTML === icons[0] && secondIcon.innerHTML === icons[0]) ||
-      (firstIcon.innerHTML === icons[1] && secondIcon.innerHTML === icons[1])
+      (firstIcon.innerHTML == icons[0] && secondIcon.innerHTML == icons[0]) ||
+      (firstIcon.innerHTML == icons[1] && secondIcon.innerHTML == icons[1])
     ) {
       firstIcon.style.color = "red";
       secondIcon.style.color = "red";
+    } else {
+      firstIcon.style.color = "black";
+      secondIcon.style.color = "black";
     }
-  }),
-  10000
-);
+  }, 10000);
+};
